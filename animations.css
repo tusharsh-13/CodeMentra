@@ -1,0 +1,417 @@
+/* Animations CSS */
+
+/* Logo Animation */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px rgba(110, 66, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(110, 66, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(110, 66, 255, 0.5);
+    }
+}
+
+.logo a {
+    animation: pulse 3s infinite;
+}
+
+/* Button Hover Animation */
+.cta-button, .practice-button, .play-button, .pricing-button.primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::after, 
+.practice-button::after, 
+.play-button::after, 
+.pricing-button.primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+}
+
+.cta-button:hover::after, 
+.practice-button:hover::after, 
+.play-button:hover::after, 
+.pricing-button.primary:hover::after {
+    width: 300%;
+    height: 300%;
+}
+
+/* Card Hover Animation */
+.glass-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(110, 66, 255, 0.3);
+}
+
+/* Progress Bar Animation */
+@keyframes fillProgress {
+    from {
+        width: 0;
+    }
+}
+
+.progress-fill {
+    animation: fillProgress 1.5s ease-out;
+}
+
+/* Circular Progress Animation */
+@keyframes fillCircle {
+    from {
+        stroke-dashoffset: 251.2;
+    }
+}
+
+.progress-fill {
+    animation: fillCircle 1.5s ease-out forwards;
+}
+
+/* Badge Hover Animation */
+.badge {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(110, 66, 255, 0.3);
+}
+
+.badge-icon {
+    transition: transform 0.3s ease;
+}
+
+.badge:hover .badge-icon {
+    transform: rotate(10deg);
+}
+
+/* Game Card Animation */
+.game-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(110, 66, 255, 0.3);
+}
+
+/* Code Block Animation */
+.code-block {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.code-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(110, 66, 255, 0.2);
+    background: rgba(26, 26, 46, 0.9);
+}
+
+.code-block:active {
+    transform: translateY(0);
+    cursor: grabbing;
+}
+
+/* Drop Slot Animation */
+.drop-slot {
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.drop-slot.active {
+    background: rgba(110, 66, 255, 0.2);
+    border-color: var(--primary-color);
+}
+
+.drop-slot.hover {
+    background: rgba(0, 229, 255, 0.2);
+    border-color: var(--secondary-color);
+}
+
+/* Help Button Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.help-button {
+    animation: bounce 2s infinite;
+}
+
+.help-button:hover {
+    animation: none;
+}
+
+/* Timeline Animation */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.timeline-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+/* Recommendation Card Animation */
+.recommendation-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.recommendations-grid .recommendation-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.recommendations-grid .recommendation-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.recommendations-grid .recommendation-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.recommendations-grid .recommendation-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.recommendations-grid .recommendation-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.recommendations-grid .recommendation-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.recommendations-grid .recommendation-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.recommendations-grid .recommendation-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+/* Game Card Animation */
+.games-grid .game-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.games-grid .game-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.games-grid .game-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.games-grid .game-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.games-grid .game-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.games-grid .game-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.games-grid .game-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.games-grid .game-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+/* Leaderboard Animation */
+.leaderboard-row {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.5s forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.leaderboard-row:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.leaderboard-row:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.leaderboard-row:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.leaderboard-row:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.leaderboard-row:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* Profile Badge Animation */
+.badges-grid .badge {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 0.5s forwards;
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.badges-grid .badge:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.badges-grid .badge:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.badges-grid .badge:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.badges-grid .badge:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.badges-grid .badge:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.badges-grid .badge:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Pricing Card Animation */
+.pricing-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.pricing-grid .pricing-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.pricing-grid .pricing-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.pricing-grid .pricing-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+/* Feature Card Animation */
+.features-grid .feature-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.features-grid .feature-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.features-grid .feature-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.features-grid .feature-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.features-grid .feature-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Typing Animation for Hero Text */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.hero-content h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    animation: 
+        typing 3.5s steps(40, end),
+        blink 1s step-end infinite;
+    animation-fill-mode: forwards;
+}
+
+/* Floating Animation for Benefits Icons */
+.benefit-icon {
+    animation: float 4s ease-in-out infinite;
+}
+
+.benefits-container .benefit-card:nth-child(1) .benefit-icon {
+    animation-delay: 0s;
+}
+
+.benefits-container .benefit-card:nth-child(2) .benefit-icon {
+    animation-delay: 1s;
+}
+
+.benefits-container .benefit-card:nth-child(3) .benefit-icon {
+    animation-delay: 2s;
+}
+
+/* Glow Animation for Premium
